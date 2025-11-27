@@ -69,7 +69,7 @@ const Register = () => {
       newErrors.confirmPassword = 'Les mots de passe ne correspondent pas';
     }
 
-    if (formData.phone && !/^\+?[\d\s\-\(\)]+$/.test(formData.phone)) {
+    if (formData.phone && !/^\+?[\d\s\-()]+$/.test(formData.phone)) {
       newErrors.phone = 'Format de téléphone invalide';
     }
 
@@ -287,13 +287,13 @@ const Register = () => {
             />
             <label htmlFor="accept-terms" className="ml-2 block text-sm text-gray-400">
               J'accepte les{' '}
-              <a href="#" className="text-blue-400 hover:text-blue-300">
+              <button type="button" className="text-blue-400 hover:text-blue-300">
                 conditions d'utilisation
-              </a>{' '}
+              </button>{' '}
               et la{' '}
-              <a href="#" className="text-blue-400 hover:text-blue-300">
+              <button type="button" className="text-blue-400 hover:text-blue-300">
                 politique de confidentialité
-              </a>
+              </button>
             </label>
           </div>
 

@@ -15,9 +15,9 @@ Une plateforme moderne et complète pour la gestion d'événements, la vente de 
 - [Installation](#-installation)
 - [Configuration](#-configuration)
 - [Utilisation](#-utilisation)
+- [Déploiement](#-déploiement)
 - [API Documentation](#-api-documentation)
 - [Structure du Projet](#-structure-du-projet)
-- [Captures d'Écran](#-captures-décran)
 - [Contribution](#-contribution)
 - [License](#-license)
 
@@ -173,6 +173,27 @@ db.users.updateOne(
   { $set: { role: "admin" } }
 )
 ```
+
+## 🚀 Déploiement
+
+### Déploiement sur Vercel
+
+Votre application est prête pour le déploiement sur Vercel !
+
+#### Guide Rapide (5 minutes)
+Consultez **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** pour déployer rapidement votre application.
+
+#### Guide Complet
+Consultez **[DEPLOYMENT.md](DEPLOYMENT.md)** pour un guide détaillé avec :
+- Configuration MongoDB Atlas
+- Déploiement Backend et Frontend
+- Configuration des variables d'environnement
+- Dépannage et optimisations
+
+#### Fichiers de Configuration
+- ✅ `vercel.json` - Configuration de déploiement
+- ✅ `backend/.env.example` - Variables d'environnement backend
+- ✅ `frontend/.env.example` - Variables d'environnement frontend
 
 ## 📚 API Documentation
 
