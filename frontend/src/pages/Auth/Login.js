@@ -33,13 +33,13 @@ const Login = () => {
     const newErrors = {};
 
     if (!formData.email) {
-      newErrors.email = 'L\'email est requis';
+      newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Format d\'email invalide';
+      newErrors.email = 'Invalid email format';
     }
 
     if (!formData.password) {
-      newErrors.password = 'Le mot de passe est requis';
+      newErrors.password = 'Password is required';
     }
 
     return newErrors;
@@ -64,7 +64,7 @@ const Login = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-900">
-        <LoadingSpinner size="large" text="Connexion en cours..." />
+        <LoadingSpinner size="large" text="Connecting..." />
       </div>
     );
   }
@@ -81,10 +81,10 @@ const Login = () => {
             <span className="text-2xl font-bold text-white">EventMaster</span>
           </Link>
           <h2 className="text-3xl font-bold text-white mb-2">
-            Connexion à votre compte
+            Login to your account
           </h2>
           <p className="text-gray-400">
-            Accédez à votre dashboard et gérez vos événements
+            Access your dashboard and manage your events
           </p>
         </div>
 
@@ -94,7 +94,7 @@ const Login = () => {
             {/* Email */}
             <div>
               <label htmlFor="email" className="form-label">
-                Adresse email
+                Email address
               </label>
               <input
                 id="email"
@@ -115,7 +115,7 @@ const Login = () => {
             {/* Password */}
             <div>
               <label htmlFor="password" className="form-label">
-                Mot de passe
+                Password
               </label>
               <div className="relative">
                 <input
@@ -127,7 +127,7 @@ const Login = () => {
                   value={formData.password}
                   onChange={handleChange}
                   className={`form-input pr-12 ${errors.password ? 'border-red-500' : ''}`}
-                  placeholder="Votre mot de passe"
+                  placeholder="Your password"
                 />
                 <button
                   type="button"
@@ -157,13 +157,13 @@ const Login = () => {
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 bg-gray-800 rounded"
               />
               <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-400">
-                Se souvenir de moi
+                Remember me
               </label>
             </div>
 
             <div className="text-sm">
               <button type="button" className="font-medium text-blue-400 hover:text-blue-300">
-                Mot de passe oublié ?
+                Forgot password?
               </button>
             </div>
           </div>
@@ -178,10 +178,10 @@ const Login = () => {
               {loading ? (
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Connexion...</span>
+                  <span>Connecting...</span>
                 </div>
               ) : (
-                'Se connecter'
+                'Sign in'
               )}
             </button>
           </div>
@@ -189,12 +189,12 @@ const Login = () => {
           {/* Register link */}
           <div className="text-center">
             <p className="text-gray-400">
-              Pas encore de compte ?{' '}
+              No account yet?{' '}
               <Link
                 to="/register"
                 className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
               >
-                Créer un compte
+                Create an account
               </Link>
             </p>
           </div>
@@ -203,11 +203,11 @@ const Login = () => {
         {/* Demo credentials */}
         <div className="mt-8 p-4 bg-gray-800 rounded-lg border border-gray-700">
           <h3 className="text-sm font-medium text-gray-300 mb-2">
-            Comptes de démonstration :
+            Demo accounts :
           </h3>
           <div className="text-xs text-gray-400 space-y-1">
             <div><strong>Admin :</strong> admin@eventmaster.com / password123</div>
-            <div><strong>Utilisateur :</strong> user@eventmaster.com / password123</div>
+            <div><strong>User :</strong> user@eventmaster.com / password123</div>
           </div>
         </div>
       </div>

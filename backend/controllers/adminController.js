@@ -13,7 +13,7 @@ const getAllUsers = async (req, res) => {
     const role = req.query.role;
     const status = req.query.status;
     
-    // Construir la requette
+    // Construire la requête
     let query = {};
     
     if (search) {
@@ -69,7 +69,7 @@ const getUserStats = async (req, res) => {
     const adminUsers = await User.countDocuments({ role: 'admin' });
     const regularUsers = await User.countDocuments({ role: 'user' });
 
-    //Utulisateur inscrits au cours des 30 dernier jours
+    //Utilisateurs inscrits au cours des 30 derniers jours
     
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
